@@ -31,10 +31,9 @@ public class EmailService {
             emailEntity.setBody(body);
             repo.save(emailEntity);
             return "Email sent successfully to " + receiver;
-        } catch (MessagingException e) {
+        }catch (MessagingException e) {
             e.printStackTrace();
             return "Failed to send email to " + receiver;  
         }
     }
 }
-
